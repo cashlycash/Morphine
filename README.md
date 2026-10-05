@@ -55,6 +55,23 @@ npm install
 npm run dev
 ```
 
+## Deploy on Vercel (One-Click)
+
+This repository is Vercel-ready with:
+- Frontend static build from `frontend/`
+- FastAPI backend exposed as a Vercel Python function at `/api/*`
+
+### Deploy
+
+1. Import this repository in Vercel.
+2. Keep the default root directory (repository root).
+3. Add environment variables in Vercel project settings:
+   - `DATABASE_URL`
+   - `JWT_SECRET_KEY`
+   - Optional: `REDIS_URL`, `VITE_API_URL`
+
+If `VITE_API_URL` is not set, the frontend uses same-origin `/api/v1` automatically.
+
 ## Implemented MVP Scope
 
 - Multi-format input normalization (text/pdf/image/video/url metadata path)
